@@ -5,9 +5,36 @@
              x:Class="BEST_WYR.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout x:Name="Start"
+                         VerticalOptions="FillAndExpand">
+                
+                <Button x:Name="sBut"
+                    Text="Start!"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="#ccffff"
+                    Clicked="Begin"
+                        />
+            </StackLayout>
+            
+            <StackLayout x:Name="Game"
+                         VerticalOptions="FillAndExpand">
+            <Label Text="Would You Rather:"
+                   HorizontalOptions="Center"/>
+            <Button x:Name="A"
+                    Text="A"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="#F1948A"
+                    Clicked="Next"
+                    />
+            <Label Text="OR"
+                    HorizontalOptions="Center"/>
+            <Button x:Name="B"
+                    Text="B"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="#AED6F1"
+                    Clicked="Next"
+                    />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

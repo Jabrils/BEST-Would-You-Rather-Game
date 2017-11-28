@@ -13,7 +13,7 @@ namespace BEST_WYR
         {
             InitializeComponent();
 
-            MainPage = new BEST_WYR.MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

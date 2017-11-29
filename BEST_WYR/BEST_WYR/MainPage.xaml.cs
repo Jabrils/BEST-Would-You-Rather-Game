@@ -173,8 +173,8 @@ namespace BEST_WYR
 
             try
             {
-                int r1 = r.Next(0, Scenario.Count);
-                int r2 = r.Next(0, Scenario.Count);
+                int r1 = 25;// r.Next(0, Scenario.Count);
+                int r2 = 20;// r.Next(0, Scenario.Count);
 
                 while (r2 == r1)
                 {

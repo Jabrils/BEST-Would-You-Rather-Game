@@ -1,40 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BEST_WYR"
              x:Class="BEST_WYR.MainPage">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout x:Name="Start"
-                         VerticalOptions="FillAndExpand">
-                
-                <Button x:Name="sBut"
-                    Text="Start!"
-                    VerticalOptions="FillAndExpand"
-                    BackgroundColor="#ccffff"
-                    Clicked="Begin"
-                        />
-            </StackLayout>
+                    
+        <StackLayout x:Name="Game"
+             VerticalOptions="FillAndExpand">
             
-            <StackLayout x:Name="Game"
-                         VerticalOptions="FillAndExpand">
             <Label Text="Would You Rather:"
                    HorizontalOptions="Center"/>
-            <Button x:Name="A"
-                    Text="A"
+            
+            <Button x:Name="aButton"    
+                    FontSize="20"
                     VerticalOptions="FillAndExpand"
-                    BackgroundColor="#F1948A"
-                    Clicked="Next"
-                    />
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#F1948A">
+                <Button.Effects>
+                    <local:ButtonWrapEffect />
+                </Button.Effects>
+            </Button>
             <Label Text="OR"
                     HorizontalOptions="Center"/>
-            <Button x:Name="B"
-                    Text="B"
+            
+            <Button x:Name="bButton" 
+                    FontSize="20"
                     VerticalOptions="FillAndExpand"
-                    BackgroundColor="#AED6F1"
-                    Clicked="Next"
-                    />
-            </StackLayout>
+                    BackgroundColor="#AED6F1">
+                <Button.Effects>
+                    <local:ButtonWrapEffect />
+                </Button.Effects>
+            </Button>
+                    
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BEST_WYR
 {
     public partial class App : Application
@@ -13,7 +15,7 @@ namespace BEST_WYR
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoadingPage();
         }
 
         protected override void OnStart()

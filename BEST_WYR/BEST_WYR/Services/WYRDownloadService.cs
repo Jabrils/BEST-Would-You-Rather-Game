@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using Plugin.Connectivity;
 
 namespace BEST_WYR
 {
@@ -32,9 +33,16 @@ namespace BEST_WYR
             {
                 try
                 {
-                    var wyrJson = await client.GetStringAsync(api);
+                    if (CrossConnectivity.Current.IsConnected)
+                    {
+                        var wyrJson = await client.GetStringAsync(api);
 
-                    Application.Current.Properties["data"] = JsonConvert.DeserializeObject<List<Scenario>>(wyrJson);
+                        Application.Current.Properties["data"] = JsonConvert.DeserializeObject<List<Scenario>>(wyrJson);
+                    }
+                    else
+                    {
+                        Application.Current.Properties["data"] = JsonConvert.DeserializeObject<List<Scenario>>(localData);
+                    }
                 }
                 catch (Exception ex)
                 {
